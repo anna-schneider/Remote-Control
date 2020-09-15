@@ -155,9 +155,7 @@ src
 
 ### Server (Back End)
 
-#### ERD Model
-
-[ERD](https://app.diagrams.net/#G1RMnx_gqqTcynwnto0csROJLJpaRDixIy)
+[ERD Model](https://app.diagrams.net/#G1RMnx_gqqTcynwnto0csROJLJpaRDixIy)
 
 <br>
 
