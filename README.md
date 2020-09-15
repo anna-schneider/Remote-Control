@@ -135,18 +135,21 @@ src
 #### Time Estimates
 
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create Event Form   |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create Routes       |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| CSS                 |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| CSS Animations      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Error Handling      |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create Copy Button  |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                   | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------- | :------: | :------------: | :-----------: | :---------: |
+| Project Pitch          |    H     |     4 hrs      |     4 hrs     |     TBD     |
+| Components             |    H     |     5 hrs      |     0 hrs     |     TBD     |
+| Scroll Bar             |    L     |     1 hrs      |     0 hrs     |     TBD     |
+| Copy URL Button        |    L     |     1 hrs      |     0 hrs     |     TBD     |
+| Create CRUD Actions    |    H     |     11 hrs     |     0 hrs     |     TBD     |
+| CSS                    |    H     |     5 hrs      |     0 hrs     |     TBD     |
+| Media Queries          |    H     |     4 hrs      |     0 hrs     |     TBD     |
+| Back End Architecture  |    H     |     4 hrs      |     0 hrs     |     TBD     |
+| Front End Architecture |    H     |     4 hrs      |     0 hrs     |     TBD     |
+| PMVP CSS Animations    |    L     |     3 hrs      |     0 hrs     |     TBD     |
+| PMVP Calendar Invite   |    L     |     3 hrs      |     0 hrs     |     TBD     |
+| PMVP 3rd Party API     |    L     |     4 hrs      |     0 hrs     |     TBD     |
+| TOTAL                  |          |     48 hrs     |     4 hrs     |     TBD     |
 
 
 <br>
