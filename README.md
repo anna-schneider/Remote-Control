@@ -33,8 +33,12 @@ _**Remote Control** MVP The host can create an event, invite users to rank a sel
 
 ### Goals
 
-- _Create a three screen React app_
-- _Full CRUD non-inclusive of User._
+- _Create an interactive, three screen React app_
+- _Full CRUD functionality on both front end & back end non-inclusive of User._
+- _Have a RESTful JSON API built with Ruby on Rails._
+- _Consume & render data from Ruby on Rails API._
+- _Utilize React Router, for client-side routing._
+- _Front end styled with CSS & Flexbox._
 
 <br>
 
@@ -60,15 +64,11 @@ _**Remote Control** MVP The host can create an event, invite users to rank a sel
 
 - [Desktop/Tablet Create Event](https://wireframe.cc/pro/pp/c644b3d5f373098)
 
-
 - [Desktop/Tablet Event Detail](https://wireframe.cc/pro/pp/2fdd62221373103)
-
 
 - [Mobile Landing](https://wireframe.cc/pro/pp/5a66f56b0373206)
 
-
 - [Mobile Create Event](https://wireframe.cc/pro/pp/cdf02791c373208)
-
 
 - [Mobile Event Detail](https://wireframe.cc/pro/pp/5af0edcad373232)
 
@@ -95,6 +95,12 @@ src
             |__ Footer/
                   |__ Footer.jsx
                   |__ Footer.css
+            |__ Form/
+                  |__ Form.jsx
+                  |__ Form.css
+            |__ Movie-Form/
+                  |__ Movie-Form.jsx
+                  |__ Movie-Form.css
 |__ containers/
       |__ MainContainer.jsx
 |__ services/
