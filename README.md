@@ -44,8 +44,6 @@ _**Remote Control** MVP The host can create an event, invite users to rank a sel
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | _Component based template system_          |
@@ -117,7 +115,6 @@ src
 |__ db/
       |__ connection.js
 |__ models/
-      |__ users.js
       |__ movies.js
       |__ events.js
       |__ votes.js
