@@ -58,7 +58,6 @@ _**Remote Control** MVP The host can create an event, invite users to rank a sel
 ### Client (Front End)
 
 #### Wireframes
-To create a link, enclose the link text in brackets (e.g., [Duck Duck Go] ) and then follow it immediately with the URL in parentheses (e.g., (https://duckduckgo.com) ).
 
 - [Desktop/Tablet Landing](https://wireframe.cc/pro/pp/5e85b96d2373094)
 
