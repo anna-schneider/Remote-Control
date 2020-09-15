@@ -35,9 +35,6 @@ _**Remote Control** MVP The host can create an event, invite users to rank a sel
 
 - _Create a three screen React app_
 - _Full CRUD non-inclusive of User._
-- _Phasellus dapibus fermentum risus vitae bibendum._?????????????
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
 
 <br>
 
@@ -76,9 +73,7 @@ _**Remote Control** MVP The host can create an event, invite users to rank a sel
 - [Mobile Event Detail](https://wireframe.cc/pro/pp/5af0edcad373232)
 
 
-#### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+#### Component Hierarchy 
 
 ``` structure
 
@@ -121,13 +116,6 @@ src
       |__ events.js
       |__ votes.js
       |__ events_movies.js
-|__ routes/
-      |__ meetings.js
-|__ seed/
-      |__ meetings.js
-|__ server.js
-|__ index.js
-|__ index.css
 
 ```
 
@@ -137,14 +125,15 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|    Button    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Layout    | functional |   n   |   n   | _The layout will contain the header and footer._                 |
+|    Header    | functional |   n   |   n   | _The header contains the logo._                                  |
+|    Button    |   class    |   y   |   y   | _The button will be re-usable._                                  |
+|    Form      | functional |   y   |   n   | _The form will contain the event name and date._                 |
+|  Movie List  | functional |   y   |   y   | _The list will contain a dropdown to rank movie options._        |
+|    Footer    | functional |   n   |   n   | _The footer will show creator info._                             |
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -159,7 +148,6 @@ src
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -167,7 +155,7 @@ src
 
 #### ERD Model
 
-https://app.diagrams.net/#G1RMnx_gqqTcynwnto0csROJLJpaRDixIy
+[](https://app.diagrams.net/#G1RMnx_gqqTcynwnto0csROJLJpaRDixIy)
 
 <br>
 
@@ -178,6 +166,7 @@ https://app.diagrams.net/#G1RMnx_gqqTcynwnto0csROJLJpaRDixIy
 > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 - ICS file to send a calendar invitation
 - CSS animations
+- Incorporate third party API to expand movie database
 ***
 
 ## Code Showcase
