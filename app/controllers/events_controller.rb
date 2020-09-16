@@ -1,24 +1,24 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :update, :destroy]
 
-  # GET /events
-  def index
-    @events = Event.all
-
-    render json: @events
-  end
 
   # GET /events/1
   def show
-    render json: @event
+    render json: @event, include: [:movies, :votes]
   end
 
   # POST /events
   def create
-    @event = Event.new(event_params)
+    @event = Event.new(event_params.except(:movies))
+    #Loop through arr of movies ids
+    event_params[:movies].each do |id|
+      #Find movie in db by id
+      movie = Movie.find(id)
+      @event.movies.push(movie)
+    end
 
     if @event.save
-      render json: @event, status: :created, location: @event
+      render json: @event, include: [:movies, :votes], status: :created
     else
       render json: @event.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class EventsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def event_params
-      params.require(:event).permit(:user_name, :event_name, :date)
+      params.require(:event).permit(:username, :name, :date, movies: [])
     end
 end
