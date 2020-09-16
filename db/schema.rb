@@ -10,17 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_15_220040) do
+ActiveRecord::Schema.define(version: 2020_09_16_213046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.text "user_name"
-    t.text "event_name"
+    t.text "username"
+    t.text "name"
     t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "events_movies", id: false, force: :cascade do |t|
+    t.bigint "event_id", null: false
+    t.bigint "movie_id", null: false
   end
 
   create_table "movies", force: :cascade do |t|
@@ -31,4 +36,16 @@ ActiveRecord::Schema.define(version: 2020_09_15_220040) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "votes", force: :cascade do |t|
+    t.text "username"
+    t.bigint "event_id", null: false
+    t.bigint "movie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_votes_on_event_id"
+    t.index ["movie_id"], name: "index_votes_on_movie_id"
+  end
+
+  add_foreign_key "votes", "events"
+  add_foreign_key "votes", "movies"
 end
