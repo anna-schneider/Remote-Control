@@ -22,7 +22,6 @@
 
 _**Remote Control** is an app to create a socially distant movie party, or to democratically select a movie choice in your household._
 
-
 <br>
 
 ## MVP
@@ -44,13 +43,13 @@ _**Remote Control** MVP The host can create an event, invite users to rank a sel
 
 ### Libraries and Dependencies
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Component based template system_          |
-|   React Router   | _Single page application controller_       |
-|      Axios       | _Simplify & enable asynchronous requests_  |
-|   Ruby on Rails  | _Generate & deliver website_               |
-|     Postgres     | _Store data to manage user selections_     |
+|    Library    | Description                               |
+| :-----------: | :---------------------------------------- |
+|     React     | _Component based template system_         |
+| React Router  | _Single page application controller_      |
+|     Axios     | _Simplify & enable asynchronous requests_ |
+| Ruby on Rails | _Generate & deliver website_              |
+|   Postgres    | _Store data to manage user selections_    |
 
 <br>
 
@@ -64,16 +63,19 @@ _**Remote Control** MVP The host can create an event, invite users to rank a sel
 
 - [Desktop/Tablet Event Detail](https://wireframe.cc/pro/pp/2fdd62221373103)
 
+- [Desktop/Tablet Event Vote](https://wireframe.cc/pro/edit/373731)
+
 - [Mobile Landing](https://wireframe.cc/pro/pp/5a66f56b0373206)
 
 - [Mobile Create Event](https://wireframe.cc/pro/pp/cdf02791c373208)
 
 - [Mobile Event Detail](https://wireframe.cc/pro/pp/5af0edcad373232)
 
+- [Mobile Event Vote](https://wireframe.cc/pro/edit/373980)
 
-#### Component Hierarchy 
+#### Component Hierarchy
 
-``` structure
+```structure
 
 src
 |__ assets/
@@ -124,18 +126,16 @@ src
 
 #### Component Breakdown
 
-
-|  Component   |    Type    | state | props | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Layout    | functional |   n   |   n   | _The layout will contain the header and footer._                 |
-|    Header    | functional |   n   |   n   | _The header contains the logo._                                  |
-|    Button    |   class    |   y   |   y   | _The button will be re-usable._                                  |
-|    Form      | functional |   y   |   n   | _The form will contain the event name and date._                 |
-|  Movie List  | functional |   y   |   y   | _The list will contain a dropdown to rank movie options._        |
-|    Footer    | functional |   n   |   n   | _The footer will show creator info._                             |
+| Component  |    Type    | state | props | Description                                               |
+| :--------: | :--------: | :---: | :---: | :-------------------------------------------------------- |
+|   Layout   | functional |   n   |   n   | _The layout will contain the header and footer._          |
+|   Header   | functional |   n   |   n   | _The header contains the logo._                           |
+|   Button   |   class    |   y   |   y   | _The button will be re-usable._                           |
+|    Form    | functional |   y   |   n   | _The form will contain the event name and date._          |
+| Movie List | functional |   y   |   y   | _The list will contain a dropdown to rank movie options._ |
+|   Footer   | functional |   n   |   n   | _The footer will show creator info._                      |
 
 #### Time Estimates
-
 
 | Task                   | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -153,7 +153,6 @@ src
 | PMVP 3rd Party API     |    L     |     4 hrs      |     0 hrs     |     TBD     |
 | TOTAL                  |          |     48 hrs     |     4 hrs     |     TBD     |
 
-
 <br>
 
 ### Server (Back End)
@@ -162,15 +161,17 @@ src
 
 <br>
 
-***
+---
 
 ## Post-MVP
 
 > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+
 - ICS file to send a calendar invitation
 - CSS animations
 - Incorporate third party API to expand movie database
-***
+
+---
 
 ## Code Showcase
 
