@@ -32,7 +32,7 @@ _**Remote Control** MVP The host can create an event, invite users to rank a sel
 
 ### Goals
 
-- _Create an interactive, three screen React app_
+- _Create an interactive, four screen React app_
 - _Full CRUD functionality on both front end & back end non-inclusive of User._
 - _Have a RESTful JSON API built with Ruby on Rails._
 - _Consume & render data from Ruby on Rails API._
@@ -112,6 +112,7 @@ src
       |__ Home.jsx
       |__ Create-Event.jsx
       |__ Event-Details.jsx
+      |__ Event-Vote.jsx
 |__ controllers/
       |__ controller.js
 |__ db/
@@ -143,11 +144,12 @@ src
 | Components             |    H     |     5 hrs      |     0 hrs     |     TBD     |
 | Scroll Bar             |    L     |     1 hrs      |     0 hrs     |     TBD     |
 | Copy URL Button        |    L     |     1 hrs      |     0 hrs     |     TBD     |
-| Create CRUD Actions    |    H     |     11 hrs     |     0 hrs     |     TBD     |
+| Create CRUD Actions    |    H     |     11 hrs     |     2 hrs     |    2 hrs    |
 | CSS                    |    H     |     5 hrs      |     0 hrs     |     TBD     |
 | Media Queries          |    H     |     4 hrs      |     0 hrs     |     TBD     |
-| Back End Architecture  |    H     |     4 hrs      |     0 hrs     |     TBD     |
+| Back End Architecture  |    H     |     4 hrs      |     5 hrs     |    5 hrs    |
 | Front End Architecture |    H     |     4 hrs      |     0 hrs     |     TBD     |
+| Research & Debugging   |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
 | PMVP CSS Animations    |    L     |     3 hrs      |     0 hrs     |     TBD     |
 | PMVP Calendar Invite   |    L     |     3 hrs      |     0 hrs     |     TBD     |
 | PMVP 3rd Party API     |    L     |     4 hrs      |     0 hrs     |     TBD     |
@@ -170,6 +172,7 @@ src
 - ICS file to send a calendar invitation
 - CSS animations
 - Incorporate third party API to expand movie database
+- User authentication & pop-up model for user info
 
 ---
 
