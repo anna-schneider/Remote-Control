@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
+import Layout from "../../layouts/Layout"
 
 export default function Home() {
 	const [nameData, setNameData] = useState({
@@ -8,14 +9,16 @@ export default function Home() {
 	const { username } = nameData
 
 	return (
-		<form>
-			<h3>Enter Name</h3>
-			<label>
-				Username:
-				<input />
-			</label>
-			<Link to="/home">Test</Link>
-			<button>Submit</button>
-		</form>
+		<Layout>
+			<form>
+				<h3>Enter Name</h3>
+				<label>
+					Username:
+					<input onChange={(e) => setNameData(e.value)} />
+				</label>
+				<Link to="/home" name={username}></Link>
+				<button>Submit</button>
+			</form>
+		</Layout>
 	)
 }
