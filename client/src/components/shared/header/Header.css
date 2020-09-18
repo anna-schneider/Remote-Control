@@ -1,0 +1,9 @@
+body {
+	display: flex;
+	justify-content: center;
+}
+
+.header {
+	font-family: "Velocette";
+	font-size: 80px;
+}
