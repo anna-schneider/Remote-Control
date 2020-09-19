@@ -1,37 +1,22 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import api from "./services/api-config"
 import { Switch, Route } from "react-router-dom"
 
 import "./App.css"
 import Layout from "./layouts/Layout"
-import CreateEvent from "./screens/createevent/CreateEvent"
+import CreateEvent from "./screens/create-event/CreateEvent"
 import Home from "./screens/home/Home"
-import Test from "./screens/test"
+import EventDetail from "./screens/event-detail/EventDetail"
+import EventVote from "./screens/event-vote/EventVote"
 
 function App() {
-	// const [currentUser, setCurrentUser] = useState(null)
-
-	// const loginSubmit = () => {}
-	// const [movies, updateMovies] = useState()
-
-	// useEffect(() => {
-	// 	const result = async () => {
-	// 		const data = await api.get("/movies")
-	// 		console.log(data.data)
-	// 		updateMovies(data)
-	// 	}
-	// 	result()
-	// }, [])
-
 	return (
 		<Layout>
 			<Switch>
 				<Route exact path="/" component={Home} />
-
-				<Route exact path="/test" component={Test} />
 				<Route exact path="/createevent" component={CreateEvent} />
-
-				{/* <Route path='/' component={eventContainer} /> */}
+				<Route exact path="/eventdetail" component={EventDetail} />
+				<Route exact path="/eventvote" component={EventVote} />
 			</Switch>
 		</Layout>
 	)

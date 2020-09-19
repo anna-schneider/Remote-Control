@@ -15,6 +15,11 @@ export default function Home(props) {
 		}))
 	}
 
+	const onButtonClick = () => {
+		// await axios post
+		//    on success set reroute to createEvent page
+	}
+
 	return (
 		<form
 			onSubmit={(e) => {
@@ -32,7 +37,7 @@ export default function Home(props) {
 					onChange={handleChange}
 				/>
 			</label>
-			<Link to="/home" name={username}></Link>
+			<Link to="/createevent" name={username}></Link>
 			<button>Submit</button>
 		</form>
 	)
