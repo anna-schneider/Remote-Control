@@ -1,11 +1,11 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { createEvent } from "@testing-library/react"
+import React, { useState, useEffect } from "react"
+import { Link, useHistory } from "react-router-dom"
+import api from "../../services/api-config"
 
 export default function Home(props) {
-	const [nameData, setNameData] = useState({
-		username: "",
-	})
-	const { username } = nameData
+	const { username, setNameData } = props
+	const history = useHistory()
 
 	const handleChange = (e) => {
 		const { name, value } = e.target
@@ -24,7 +24,7 @@ export default function Home(props) {
 		<form
 			onSubmit={(e) => {
 				e.preventDefault()
-				props.homeSubmit(nameData)
+				history.push("/createEvent")
 			}}
 		>
 			<h3>Enter Name</h3>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import api from "./services/api-config"
 import { Switch, Route } from "react-router-dom"
 
@@ -10,12 +10,21 @@ import EventDetail from "./screens/event-detail/EventDetail"
 import EventVote from "./screens/event-vote/EventVote"
 
 function App() {
+	const [nameData, setNameData] = useState({
+		username: "",
+	})
+	const { username } = nameData
+
 	return (
 		<Layout>
 			<Switch>
-				<Route exact path="/" component={Home} />
-				<Route exact path="/createevent" component={CreateEvent} />
-				<Route exact path="/eventdetail" component={EventDetail} />
+				<Route exact path="/">
+					<Home username={username} setNameData={setNameData} />
+				</Route>
+				<Route exact path="/createevent">
+					<CreateEvent username={username} />
+				</Route>
+				<Route exact path="/eventdetail/:id" component={EventDetail} />
 				<Route exact path="/eventvote" component={EventVote} />
 			</Switch>
 		</Layout>

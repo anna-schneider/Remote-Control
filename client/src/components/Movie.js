@@ -1,10 +1,11 @@
 import React from "react"
 
 export default function Movie(props) {
-	const { id, name, trailer, poster } = props
+	const { id, name, trailer, poster, handleCheckbox } = props
 
 	return (
 		<div>
+			<input type="checkbox" onChange={handleCheckbox} />
 			<div>{id}</div>
 			<div>{name}</div>
 			<div>
