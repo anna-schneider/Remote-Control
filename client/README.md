@@ -1,68 +1,186 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Remote-Control README
 
-## Available Scripts
+- [Overview](#overview)
+- [MVP](#mvp)
+- [Goals](#goals)
+- [Libraries and Dependencies](#libraries-and-dependencies)
+- [Client (Front End)](#client-front-end)
+- [Wireframes](#wireframes)
+- [Component Tree](#component-tree)
+- [Component Hierarchy](#component-hierarchy)
+- [Component Breakdown](#component-breakdown)
+- [Time Estimates](#time-estimates)
+- [Server (Back End)](#server-back-end)
+- [ERD Model](#erd-model)
+- [Post-MVP](#post-mvp)
+- [Code Showcase](#code-showcase)
+- [Code Issues & Resolutions](#code-issues--resolutions)
 
-In the project directory, you can run:
+<br>
 
-### `yarn start`
+## Overview
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_**Remote Control** is an app to create a socially distant movie party, or to democratically select a movie choice in your household._
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<br>
 
-### `yarn test`
+## MVP
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_**Remote Control** MVP The host can create an event, invite users to rank a selection of movies, and the app will aggregate the total votes._
 
-### `yarn build`
+<br>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Goals
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- _Create an interactive, four screen React app_
+- _Full CRUD functionality on both front end & back end non-inclusive of User._
+- _Have a RESTful JSON API built with Ruby on Rails._
+- _Consume & render data from Ruby on Rails API._
+- _Utilize React Router, for client-side routing._
+- _Front end styled with CSS & Flexbox._
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `yarn eject`
+### Libraries and Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+|    Library    | Description                               |
+| :-----------: | :---------------------------------------- |
+|     React     | _Component based template system_         |
+| React Router  | _Single page application controller_      |
+|     Axios     | _Simplify & enable asynchronous requests_ |
+| Ruby on Rails | _Generate & deliver website_              |
+|   Postgres    | _Store data to manage user selections_    |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Client (Front End)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Wireframes
 
-## Learn More
+- [Desktop/Tablet Landing](https://wireframe.cc/pro/pp/5e85b96d2373094)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Desktop/Tablet Create Event](https://wireframe.cc/pro/pp/c644b3d5f373098)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Desktop/Tablet Event Detail](https://wireframe.cc/pro/pp/2fdd62221373103)
 
-### Code Splitting
+- [Desktop/Tablet Event Vote](https://wireframe.cc/pro/edit/373731)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- [Mobile Landing](https://wireframe.cc/pro/pp/5a66f56b0373206)
 
-### Analyzing the Bundle Size
+- [Mobile Create Event](https://wireframe.cc/pro/pp/cdf02791c373208)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- [Mobile Event Detail](https://wireframe.cc/pro/pp/5af0edcad373232)
 
-### Making a Progressive Web App
+- [Mobile Event Vote](https://wireframe.cc/pro/edit/373980)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### Component Hierarchy
 
-### Advanced Configuration
+```structure
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+src
+|__ assets/
+      |__ fonts
+      |__ images
+|__ components/
+      |__ shared/
+            |__ Layout/
+                  |__ Layout.jsx
+                  |__ Layout.css
+            |__ Header/
+                  |__ Header.jsx
+                  |__ Header.css
+            |__ Button/
+                  |__ Button.jsx
+                  |__ Button.css
+            |__ Footer/
+                  |__ Footer.jsx
+                  |__ Footer.css
+            |__ Form/
+                  |__ Form.jsx
+                  |__ Form.css
+            |__ Movie-Form/
+                  |__ Movie-Form.jsx
+                  |__ Movie-Form.css
+      |__ Movie.js/
+|__ containers/
+      |__ MainContainer.jsx
+|__ services/
+      |__ apiConfig.js
+      |__ events.js
+      |__ movies.js
 
-### Deployment
+|__ screens/
+      |__ Home.jsx
+      |__ Create-Event.jsx
+      |__ Event-Details.jsx
+      |__ Event-Vote.jsx
+|__ controllers/
+      |__ controller.js
+|__ db/
+      |__ connection.js
+|__ models/
+      |__ movies.js
+      |__ events.js
+      |__ votes.js
+      |__ events_movies.js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```
 
-### `yarn build` fails to minify
+#### Component Breakdown
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+| Component  |    Type    | state | props | Description                                               |
+| :--------: | :--------: | :---: | :---: | :-------------------------------------------------------- |
+|   Layout   | functional |   n   |   y   | _The layout will contain the header and footer._          |
+|   Header   | functional |   n   |   n   | _The header contains the logo._                           |
+|   Button   |   class    |   y   |   y   | _The button will be re-usable._                           |
+|    Form    | functional |   y   |   n   | _The form will contain the event name and date._          |
+| Movie List | functional |   y   |   y   | _The list will contain a dropdown to rank movie options._ |
+|   Footer   | functional |   n   |   n   | _The footer will show creator info._                      |
+
+#### Time Estimates
+
+| Task                   | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------- | :------: | :------------: | :-----------: | :---------: |
+| Project Pitch          |    H     |     4 hrs      |     4 hrs     |     TBD     |
+| Components             |    H     |     5 hrs      |     1 hrs     |    1 hrs    |
+| Scroll Bar             |    L     |     1 hrs      |     0 hrs     |     TBD     |
+| Copy URL Button        |    L     |     1 hrs      |     0 hrs     |     TBD     |
+| Create CRUD Actions    |    H     |     11 hrs     |     9 hrs     |    9 hrs    |
+| CSS                    |    H     |     5 hrs      |    .5 hrs     |   .5 hrs    |
+| Media Queries          |    H     |     4 hrs      |     0 hrs     |     TBD     |
+| Back End Architecture  |    H     |     4 hrs      |     5 hrs     |    5 hrs    |
+| Front End Architecture |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
+| Research & Debugging   |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
+| PMVP CSS Animations    |    L     |     3 hrs      |     0 hrs     |     TBD     |
+| PMVP Calendar Invite   |    L     |     3 hrs      |     0 hrs     |     TBD     |
+| PMVP 3rd Party API     |    L     |     4 hrs      |     0 hrs     |     TBD     |
+| TOTAL                  |          |     48 hrs     |   27.5 hrs    |  27.5 hrs   |
+
+<br>
+
+### Server (Back End)
+
+[ERD Model](https://app.diagrams.net/#G1RMnx_gqqTcynwnto0csROJLJpaRDixIy)
+
+<br>
+
+---
+
+## Post-MVP
+
+> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+
+- ICS file to send a calendar invitation
+- CSS animations
+- Incorporate third party API to expand movie database
+- User authentication & pop-up model for user info
+
+---
+
+## Code Showcase
+
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+## Code Issues & Resolutions
+
+> Use this section to list of all major issues encountered and their resolution.

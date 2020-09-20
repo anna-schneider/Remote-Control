@@ -18,7 +18,9 @@ export default function Movie(props) {
 					allowfullscreen
 				></iframe>
 			</div>
-			<div>{/* <img src={poster} /> */}</div>
+			<div>
+				<img src={poster} />
+			</div>
 		</div>
 	)
 }
