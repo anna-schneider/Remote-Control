@@ -25,7 +25,7 @@ function App() {
 					<CreateEvent username={username} />
 				</Route>
 				<Route exact path="/eventdetail/:id" component={EventDetail} />
-				<Route exact path="/eventvote" component={EventVote} />
+				<Route exact path="/eventvote/:id" component={EventVote} />
 			</Switch>
 		</Layout>
 	)

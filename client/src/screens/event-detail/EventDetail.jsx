@@ -3,7 +3,7 @@ import { useParams, useLocation } from "react-router-dom"
 
 import "./EventDetail.css"
 import "../../services/events"
-import { getOneEvent } from "../../services/events"
+import { getOneEvent, deleteEvent } from "../../services/events"
 import MovieDetail from "../../components/MovieDetail"
 
 // inspired by https://stackoverflow.com/questions/63546951/react-copy-to-clipboard-using-useref-hook
@@ -26,8 +26,11 @@ export default function EventDetail() {
 	}, [id, setEvent])
 
 	const getPath = () => {
-		copyToClipboard(`${window.location.host}/eventvote`)
-		// copyToClipboard(`${window.location.host}/eventvote/${id}`)
+		copyToClipboard(`${window.location.origin}/eventvote`)
+	}
+
+	const removeEvent = async () => {
+		const singleEvent = await deleteEvent(id)
 	}
 
 	return (
@@ -49,7 +52,7 @@ export default function EventDetail() {
 				})}
 			</p>
 			<button onClick={getPath}>Copy URL</button>
-			<button>Delete Event</button>
+			<button onClick={removeEvent}>Delete Event</button>
 		</div>
 	)
 }

@@ -15,8 +15,8 @@ export default function Movie(props) {
 		trailer,
 		poster,
 		handleDropDown,
-		isSelected,
-		isDisabled,
+		isSelected = false,
+		isDisabled = false,
 	} = props
 
 	return (

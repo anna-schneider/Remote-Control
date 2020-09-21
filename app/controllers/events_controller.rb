@@ -28,7 +28,13 @@ class EventsController < ApplicationController
 
   # PATCH/PUT /events/1
   def update
-    if @event.update(event_params)
+    if @event.update(event_params.except(:movies))
+      event_params[:movies].each do |id, value|
+        #Find movie in db by id
+        movie = Movie.find(id)
+        @event.movies.push(movie)
+        @event.votes.create(value: value, movie: movie, username: event_params[:username])
+      end
       render json: @event
     else
       render json: @event.errors, status: :unprocessable_entity
