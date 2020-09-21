@@ -1,4 +1,8 @@
 .footer {
 	height: 50px;
-	/* margin-top: -50px; */
+	font-family: "Aqua";
+	font-weight: bold;
+	color: azure;
+	background-color: black;
+	margin-top: 15px;
 }
