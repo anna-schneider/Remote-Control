@@ -6,4 +6,13 @@ body {
 .header {
 	font-family: "Velocette";
 	font-size: 60px;
+	color: azure;
+}
+
+.header-container {
+	background-image: url("../../../assets/images/vintage-tv-ad.jpg");
+	background-repeat: no-repeat;
+	/* object-fit: fill; */
+	height: 250px;
+	width: 300px;
 }

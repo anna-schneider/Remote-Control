@@ -11,13 +11,15 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params.except(:movies))
     #Loop through arr of movies ids
-    event_params[:movies].each do |id|
-      #Find movie in db by id
-      movie = Movie.find(id)
-      @event.movies.push(movie)
-    end
-
+    
     if @event.save
+      event_params[:movies].each do |id, value|
+        #Find movie in db by id
+        movie = Movie.find(id)
+        @event.movies.push(movie)
+        @event.votes.create(value: value, movie: movie, username: event_params[:username])
+      end
+  
       render json: @event, include: [:movies, :votes], status: :created
     else
       render json: @event.errors, status: :unprocessable_entity
@@ -46,6 +48,6 @@ class EventsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def event_params
-      params.require(:event).permit(:username, :name, :date, movies: [])
+      params.require(:event).permit(:username, :name, :date, movies:{})
     end
 end

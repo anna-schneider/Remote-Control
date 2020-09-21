@@ -5,7 +5,9 @@ import "./Header.css"
 export default function Header() {
 	return (
 		<>
-			<h1 className="header">Remote Control</h1>
+			<header className="header-container">
+				<h1 className="header">Remote Control</h1>
+			</header>
 		</>
 	)
 }

@@ -16,3 +16,8 @@ code {
 	font-family: "Velocette";
 	src: local("Velocette"), url(./assets/fonts/Velocette.ttf) format("ttf");
 }
+
+@font-face {
+	font-family: "Aqua";
+	src: local("aqua"), url(./assets/fonts/aqua.ttf) format("ttf");
+}
