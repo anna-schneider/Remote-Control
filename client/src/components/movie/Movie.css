@@ -1,10 +1,8 @@
-/* css */
 .movie-title {
 	font-family: "Aqua";
 	font-weight: 600;
 	font-size: 20px;
 	margin-bottom: 15px;
-
 	/* color: azure; */
 }
 
@@ -16,7 +14,6 @@
 .trailer {
 	height: 220px;
 	width: 340px;
-	margin-bottom: 35px;
 }
 
 .poster-container {
@@ -32,4 +29,9 @@
 select {
 	height: 30px;
 	font-family: "Aqua";
+}
+
+.option-container {
+	border: bisque solid 10px;
+	margin-bottom: 35px;
 }

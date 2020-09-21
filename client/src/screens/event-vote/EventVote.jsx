@@ -56,8 +56,10 @@ export default function EventVote() {
 
 	return (
 		<div className="event-vote-container">
-			<h2 className="event-name">{event.name}</h2>
-			<h2>Event Name Placeholder</h2>
+			<div className="event-info">
+				<h2 className="event-name">{event.name}</h2>
+				<h2>{event.date}</h2>
+			</div>
 			<div className="vote-selection">
 				{event.movies.map((movie) => {
 					return <Movie {...movie} handleDropDown={handleDropDown} />

@@ -10,5 +10,10 @@ body {
 }
 
 .event-name {
-	/* color: azure; */
+	margin-right: 14px;
+}
+
+.event-info {
+	display: flex;
+	justify-content: center;
 }
