@@ -42,7 +42,11 @@ export default function Movie(props) {
 				></iframe>
 			</div>
 			<div>
-				<img src={require(`../assets/images/${poster}`)} alt={name} />
+				<img
+					className="posters"
+					src={require(`../assets/images/${poster}`)}
+					alt={name}
+				/>
 			</div>
 		</div>
 	)

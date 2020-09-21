@@ -48,7 +48,6 @@ export default function CreateEvent(props) {
 
 	const onClick = async () => {
 		try {
-			//Need value back from postevent to get event id; remove hard-code id
 			const singleEvent = await postEvent({
 				name,
 				date,
@@ -56,8 +55,6 @@ export default function CreateEvent(props) {
 				username,
 			})
 			setEvent(singleEvent)
-
-			// const id = "7"
 
 			history.push(`/eventdetail/${singleEvent.id}`)
 		} catch (e) {

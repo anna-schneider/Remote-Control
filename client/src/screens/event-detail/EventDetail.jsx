@@ -1,14 +1,34 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import { useParams } from "react-router-dom"
 
 import "./EventDetail.css"
 import "../../services/events"
 import { getOneEvent } from "../../services/events"
-import Movie from "../../components/Movie"
+import MovieDetail from "../../components/MovieDetail"
 
 export default function EventDetail() {
 	const [event, setEvent] = useState({ movies: [] })
 	const { id } = useParams()
+
+	const inputRef = useRef()
+	const copyToClipboard = () => {
+		const copyText = inputRef.current.value
+
+		if (navigator.clipboard) {
+			navigator.clipboard
+				.writeText("my url")
+				.then(() => {
+					console.log("copy success")
+				})
+				.catch((error) => {
+					console.log(error)
+				})
+		} else {
+			inputRef.current.select()
+			console.log(document.execCommand("copy")) //true
+			document.execCommand("copy")
+		}
+	}
 
 	useEffect(async () => {
 		const singleEvent = await getOneEvent(id)
@@ -26,7 +46,7 @@ export default function EventDetail() {
 			<p>
 				{event.movies.map((movie) => {
 					return (
-						<Movie
+						<MovieDetail
 							{...movie}
 							isDisabled={false}
 							isSelected={true}
@@ -35,7 +55,9 @@ export default function EventDetail() {
 					)
 				})}
 			</p>
-			<button>Copy URL</button>
+			<button ref={inputRef} onClick={copyToClipboard}>
+				Copy URL
+			</button>
 			<button>Delete Event</button>
 		</div>
 	)
