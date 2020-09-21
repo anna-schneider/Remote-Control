@@ -18,11 +18,6 @@ export default function Home(props) {
 		}))
 	}
 
-	const onButtonClick = () => {
-		// await axios post
-		//    on success set reroute to createEvent page
-	}
-
 	return (
 		<form
 			onSubmit={(e) => {

@@ -5,6 +5,7 @@ import { postEvent } from "../../services/events"
 import "./CreateEvent.css"
 import Movie from "../../components/movie/Movie.js"
 import api from "../../services/api-config"
+import Button from "../../components/shared/button/Button"
 
 export default function CreateEvent(props) {
 	const [movies, updateMovies] = useState([])
@@ -87,17 +88,34 @@ export default function CreateEvent(props) {
 					e.preventDefault()
 				}}
 			>
+				<h2>Welcome {username}</h2>
 				<h2 className="create-party">Create Your Remote Movie Party</h2>
-				<label>
-					Party Name:
-					<input type="text" name="name" value={name} onChange={handleChange} />
-				</label>
-				<label>
-					Party Date:
-					<input type="date" name="date" value={date} onChange={handleChange} />
-				</label>
+				<div className="input-container">
+					<label className="name">
+						Party Name:
+						<input
+							type="text"
+							name="name"
+							value={name}
+							onChange={handleChange}
+						/>
+					</label>
+					<label className="date">
+						Party Date:
+						<input
+							type="date"
+							name="date"
+							value={date}
+							onChange={handleChange}
+						/>
+					</label>
+				</div>
 
-				<button onClick={onClick}>Create Event</button>
+				<Button
+					// className="create-btn"
+					onClick={onClick}
+					content="Create Event"
+				/>
 
 				{movies.map((movie) => {
 					const { isDisabled, isSelected } = checkStatus(movie)

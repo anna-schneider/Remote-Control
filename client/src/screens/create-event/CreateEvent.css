@@ -4,3 +4,22 @@
 .create-party {
 	font-family: "aqua";
 }
+
+.create-btn {
+	margin-bottom: 12px;
+}
+
+.input-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.date {
+	margin: 6px 0 10px 8px;
+}
+
+.name,
+.date {
+	font-family: "Haarlem-Deco";
+	font-size: 20px;
+}
