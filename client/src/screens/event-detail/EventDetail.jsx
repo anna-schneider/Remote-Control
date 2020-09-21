@@ -4,7 +4,7 @@ import { useParams, useLocation } from "react-router-dom"
 import "./EventDetail.css"
 import "../../services/events"
 import { getOneEvent, deleteEvent } from "../../services/events"
-import MovieDetail from "../../components/MovieDetail"
+import MovieDetail from "../../components/movie-detail/MovieDetail"
 
 // inspired by https://stackoverflow.com/questions/63546951/react-copy-to-clipboard-using-useref-hook
 const copyToClipboard = (text) => {
@@ -35,7 +35,6 @@ export default function EventDetail() {
 
 	return (
 		<div className="event-detail-container">
-			<h2>Your Event</h2>
 			<p className="greeting">
 				Hi attendees of {event.name}, you suck. {event.id}
 			</p>

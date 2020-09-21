@@ -1,16 +1,18 @@
 import React from "react"
 
+import "./MovieDetail.css"
+
 export default function MovieDetail(props) {
 	const { id, name, poster } = props
 
 	return (
 		<div>
 			<div>{id}</div>
-			<div>{name}</div>
+			<div className="name">{name}</div>
 			<div>
 				<img
 					className="posters"
-					src={require(`../assets/images/${poster}`)}
+					src={require(`../../assets/images/${poster}`)}
 					alt={name}
 				/>
 			</div>
