@@ -1,18 +1,20 @@
 body {
 	display: flex;
-	justify-content: center;
-}
-
-.header {
-	font-family: "Velocette";
-	font-size: 60px;
-	color: azure;
+	/* justify-content: center; */
 }
 
 .header-container {
 	background-image: url("../../../assets/images/vintage-tv-ad.jpg");
-	background-repeat: no-repeat;
-	/* object-fit: fill; */
-	height: 250px;
+	/* background-repeat: no-repeat; */
+	object-fit: cover;
+	height: 190px;
 	width: 300px;
+	justify-content: center;
+	margin-top: -42px;
+}
+
+.title {
+	font-family: "Velocette";
+	font-size: 60px;
+	color: azure;
 }
