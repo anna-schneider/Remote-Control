@@ -2,10 +2,10 @@ import React from "react"
 
 import "./Button.css"
 
-export default function Button() {
+export default function Button(props) {
 	return (
 		<div>
-			<button className="button"></button>
+			<button className="button">{props.content}</button>
 		</div>
 	)
 }

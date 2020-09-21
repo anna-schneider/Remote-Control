@@ -1,7 +1,10 @@
 import { createEvent } from "@testing-library/react"
 import React, { useState, useEffect } from "react"
 import { Link, useHistory } from "react-router-dom"
+
+import "./Home.css"
 import api from "../../services/api-config"
+import Button from "../../components/shared/button/Button"
 
 export default function Home(props) {
 	const { username, setNameData } = props
@@ -27,10 +30,11 @@ export default function Home(props) {
 				history.push("/createEvent")
 			}}
 		>
-			<h3>Enter Name</h3>
+			<h3 className="name">Enter Name</h3>
 			<label>
 				Username:
 				<input
+					className="name-input"
 					type="text"
 					name="username"
 					value={username}
@@ -38,7 +42,7 @@ export default function Home(props) {
 				/>
 			</label>
 			<Link to="/createevent" name={username}></Link>
-			<button>Submit</button>
+			<Button className="submit-button" content="Submit" />
 		</form>
 	)
 }

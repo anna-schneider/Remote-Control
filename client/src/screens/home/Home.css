@@ -1,0 +1,15 @@
+body {
+	font-family: "Haarlem-Deco";
+}
+
+.name {
+	font-size: x-large;
+}
+
+.name-input {
+	margin-bottom: 60px;
+}
+
+.submit-button {
+	margin-bottom: 60px;
+}
