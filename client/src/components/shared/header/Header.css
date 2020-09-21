@@ -6,7 +6,7 @@ body {
 .header-container {
 	background-image: url("../../../assets/images/vintage-tv-ad.jpg");
 	/* background-repeat: no-repeat; */
-	object-fit: cover;
+	/* object-fit: cover; */
 	height: 190px;
 	width: 300px;
 	justify-content: center;

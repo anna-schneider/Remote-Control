@@ -1,0 +1,35 @@
+/* css */
+.movie-title {
+	font-family: "Aqua";
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 15px;
+
+	/* color: azure; */
+}
+
+.poster {
+	height: 220px;
+	width: 150px;
+}
+
+.trailer {
+	height: 220px;
+	width: 340px;
+	margin-bottom: 35px;
+}
+
+.poster-container {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.choice-container {
+	margin-top: 60px;
+	width: 180px;
+}
+
+select {
+	height: 30px;
+	font-family: "Aqua";
+}

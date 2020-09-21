@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom"
 import { postEvent } from "../../services/events"
 
 import "./CreateEvent.css"
-import Movie from "../../components/Movie.js"
+import Movie from "../../components/movie/Movie.js"
 import api from "../../services/api-config"
 
 export default function CreateEvent(props) {

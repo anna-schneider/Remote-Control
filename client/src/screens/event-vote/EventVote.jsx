@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 import "./EventVote.css"
 import "../../services/events"
 import { getOneEvent, putEvent } from "../../services/events"
-import Movie from "../../components/Movie"
+import Movie from "../../components/movie/Movie"
 
 export default function EventVote() {
 	const [event, setEvent] = useState({ movies: [] })
@@ -56,11 +56,13 @@ export default function EventVote() {
 
 	return (
 		<div className="event-vote-container">
-			{event.movies.map((movie) => {
-				return <Movie {...movie} handleDropDown={handleDropDown} />
-			})}
-			<h2>{event.name}</h2>
+			<h2 className="event-name">{event.name}</h2>
 			<h2>Event Name Placeholder</h2>
+			<div className="vote-selection">
+				{event.movies.map((movie) => {
+					return <Movie {...movie} handleDropDown={handleDropDown} />
+				})}
+			</div>
 			<button onClick={onClick}>Submit Vote</button>
 		</div>
 	)

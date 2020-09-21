@@ -1,0 +1,14 @@
+body {
+	display: flex;
+	justify-content: center;
+	/* background-color: black; */
+}
+
+.event-vote-container {
+	/* display: flex; */
+	/* justify-content: center; */
+}
+
+.event-name {
+	/* color: azure; */
+}

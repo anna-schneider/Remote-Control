@@ -1,5 +1,7 @@
 import React from "react"
-import Dropdown from "./shared/dropdown/Dropdown"
+
+import "./Movie.css"
+import Dropdown from "../shared/dropdown/Dropdown"
 
 const dropdownOptions = [
 	{ value: "0", label: "" },
@@ -21,16 +23,28 @@ export default function Movie(props) {
 
 	return (
 		<div className={isSelected ? "selected" : ""}>
-			<Dropdown
-				options={dropdownOptions}
-				onChange={(e) => handleDropDown({ value: e.target.value, id })}
-				isDisabled={isDisabled}
-			/>
+			<div className="poster-container">
+				<img
+					className="poster"
+					src={require(`../../assets/images/${poster}`)}
+					alt={name}
+				/>
+				<div>{id}</div>
+				<div className="choice-container">
+					<div className="movie-title">{name}</div>
+					<div>
+						<Dropdown
+							options={dropdownOptions}
+							onChange={(e) => handleDropDown({ value: e.target.value, id })}
+							isDisabled={isDisabled}
+						/>
+					</div>
+				</div>
+			</div>
 
-			<div>{id}</div>
-			<div>{name}</div>
 			<div>
 				<iframe
+					className="trailer"
 					title={name}
 					alt={name}
 					width="560"
@@ -40,13 +54,6 @@ export default function Movie(props) {
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowFullScreen
 				></iframe>
-			</div>
-			<div>
-				<img
-					className="posters"
-					src={require(`../assets/images/${poster}`)}
-					alt={name}
-				/>
 			</div>
 		</div>
 	)
