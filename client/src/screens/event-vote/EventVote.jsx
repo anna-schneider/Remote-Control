@@ -5,6 +5,7 @@ import "./EventVote.css"
 import "../../services/events"
 import { getOneEvent, putEvent } from "../../services/events"
 import Movie from "../../components/movie/Movie"
+import Button from "../../components/shared/button/Button"
 
 export default function EventVote() {
 	const [event, setEvent] = useState({ movies: [] })
@@ -65,7 +66,7 @@ export default function EventVote() {
 					return <Movie {...movie} handleDropDown={handleDropDown} />
 				})}
 			</div>
-			<button onClick={onClick}>Submit Vote</button>
+			<Button content="Submit Vote" onClick={onClick} />
 		</div>
 	)
 }
