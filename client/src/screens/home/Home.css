@@ -13,3 +13,7 @@ body {
 .submit-button {
 	margin-bottom: 60px;
 }
+
+.username {
+	color: azure;
+}

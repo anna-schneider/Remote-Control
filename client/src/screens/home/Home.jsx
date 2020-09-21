@@ -26,7 +26,7 @@ export default function Home(props) {
 			}}
 		>
 			<h3 className="name">Enter Name</h3>
-			<label>
+			<label className="username">
 				Username:
 				<input
 					className="name-input"

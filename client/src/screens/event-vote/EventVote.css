@@ -1,7 +1,7 @@
 body {
 	display: flex;
 	justify-content: center;
-	/* background-color: black; */
+	background-color: black;
 }
 
 .event-vote-container {
@@ -16,4 +16,5 @@ body {
 .event-info {
 	display: flex;
 	justify-content: center;
+	color: azure;
 }
