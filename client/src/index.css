@@ -21,3 +21,8 @@ code {
 	font-family: "Aqua";
 	src: local("aqua"), url(./assets/fonts/aqua.ttf) format("ttf");
 }
+
+@font-face {
+	font-family: "Haarleem";
+	src: local("Harleem Deco"), url(./assets/fonts/Haarlem-Deco.ttf) format("ttf");
+}

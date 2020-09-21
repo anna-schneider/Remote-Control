@@ -1,46 +1,39 @@
 import React, { useEffect, useState, useRef } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useLocation } from "react-router-dom"
 
 import "./EventDetail.css"
 import "../../services/events"
 import { getOneEvent } from "../../services/events"
 import MovieDetail from "../../components/MovieDetail"
 
+// inspired by https://stackoverflow.com/questions/63546951/react-copy-to-clipboard-using-useref-hook
+const copyToClipboard = (text) => {
+	const ta = document.createElement("textarea")
+	ta.innerText = text
+	document.body.appendChild(ta)
+	ta.select()
+	document.execCommand("copy")
+	ta.remove()
+}
+
 export default function EventDetail() {
 	const [event, setEvent] = useState({ movies: [] })
 	const { id } = useParams()
-
-	const inputRef = useRef()
-	const copyToClipboard = () => {
-		const copyText = inputRef.current.value
-
-		if (navigator.clipboard) {
-			navigator.clipboard
-				.writeText("my url")
-				.then(() => {
-					console.log("copy success")
-				})
-				.catch((error) => {
-					console.log(error)
-				})
-		} else {
-			inputRef.current.select()
-			console.log(document.execCommand("copy")) //true
-			document.execCommand("copy")
-		}
-	}
 
 	useEffect(async () => {
 		const singleEvent = await getOneEvent(id)
 		setEvent(singleEvent)
 	}, [id, setEvent])
 
-	console.log(event)
+	const getPath = () => {
+		copyToClipboard(`${window.location.host}/eventvote`)
+		// copyToClipboard(`${window.location.host}/eventvote/${id}`)
+	}
 
 	return (
 		<div className="event-detail-container">
 			<h2>Your Event</h2>
-			<p>
+			<p className="greeting">
 				Hi attendees of {event.name}, you suck. {event.id}
 			</p>
 			<p>
@@ -55,9 +48,7 @@ export default function EventDetail() {
 					)
 				})}
 			</p>
-			<button ref={inputRef} onClick={copyToClipboard}>
-				Copy URL
-			</button>
+			<button onClick={getPath}>Copy URL</button>
 			<button>Delete Event</button>
 		</div>
 	)
