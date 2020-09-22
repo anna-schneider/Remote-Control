@@ -7,3 +7,24 @@
 .name {
 	color: azure;
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	.posters {
+		height: 420px;
+		width: 320px;
+	}
+
+	.name {
+		font-size: 35px;
+	}
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	.event-container {
+		width: 100%;
+		display: flex;
+	}
+
+	.name {
+		font-size: 35px;
+	}
+}

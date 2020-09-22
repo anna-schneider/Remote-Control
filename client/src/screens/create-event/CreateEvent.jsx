@@ -88,7 +88,7 @@ export default function CreateEvent(props) {
 					e.preventDefault()
 				}}
 			>
-				<h2>Welcome {username}</h2>
+				<h2 className="welcome">Welcome {username}</h2>
 				<h2 className="create-party">Create Your Remote Movie Party</h2>
 				<div className="input-container">
 					<label className="name">
