@@ -111,9 +111,8 @@ export default function CreateEvent(props) {
 					</label>
 				</div>
 
-				{/* <Link to="/eventdetail/:id"></Link> */}
 				<Button
-					// className="create-btn"
+					className="create-btn"
 					onClick={onClick}
 					content="Create Event"
 				/>

@@ -36,11 +36,17 @@
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 	.date {
 		font-size: 35px;
-		margin-left: 85px;
+		margin-left: 250px;
 	}
 
 	input {
-		width: 400px;
+		width: 300px;
 		height: 40px;
+	}
+
+	.button.create-btn {
+		height: 50px;
+		width: 190px;
+		font-size: 22px;
 	}
 }
