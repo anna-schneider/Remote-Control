@@ -4,11 +4,6 @@ body {
 	background-color: #202020;
 }
 
-.event-vote-container {
-	/* display: flex; */
-	/* justify-content: center; */
-}
-
 .event-name {
 	margin-right: 14px;
 }
