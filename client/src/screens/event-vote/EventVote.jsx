@@ -66,7 +66,7 @@ export default function EventVote() {
 					return <Movie {...movie} handleDropDown={handleDropDown} />
 				})}
 			</div>
-			<Button content="Submit Vote" onClick={onClick} />
+			<Button className="submit-vote" content="Submit Vote" onClick={onClick} />
 		</div>
 	)
 }

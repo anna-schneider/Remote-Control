@@ -13,3 +13,18 @@ body {
 	justify-content: center;
 	color: azure;
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	.submit-vote {
+		height: 60px;
+		width: 155px;
+		font-size: 22px;
+	}
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	.submit-vote {
+		height: 65px;
+		width: 195px;
+		font-size: 22px;
+	}
+}
