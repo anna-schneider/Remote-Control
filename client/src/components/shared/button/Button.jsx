@@ -5,7 +5,9 @@ import "./Button.css"
 export default function Button(props) {
 	return (
 		<div>
-			<button className="button">{props.content}</button>
+			<button className="button" onClick={props.onClick}>
+				{props.content}
+			</button>
 		</div>
 	)
 }
