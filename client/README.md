@@ -179,8 +179,21 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+````<div>
+					<iframe
+						className="trailer"
+						title={name}
+						alt={name}
+						width="560"
+						height="315"
+						src={`https://www.youtube.com/embed/${trailer}`}
+						frameBorder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowFullScreen
+					></iframe>
+				</div>```
 
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution.
+````
