@@ -35,3 +35,52 @@ select {
 	border: bisque solid 10px;
 	margin-bottom: 35px;
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	.movie-title {
+		font-size: 30px;
+	}
+
+	.poster {
+		height: 300px;
+		width: 220px;
+		margin: 0 25px 0 20px;
+	}
+
+	.trailer {
+		height: 220px;
+		width: 460px;
+	}
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	.movie-title {
+		font-size: 40px;
+	}
+
+	.poster {
+		height: 440px;
+		width: 320px;
+		/* margin: 90px 25px -90px 20px; */
+	}
+
+	.trailer {
+		height: 320px;
+		width: 560px;
+	}
+
+	.option-container {
+		display: flex;
+		height: 620px;
+		width: 1300px;
+	}
+
+	.poster-container {
+		flex-direction: column;
+		margin-left: 30px;
+	}
+
+	.choice-container {
+		/* margin: 500px 0 0 120px; */
+	}
+}
