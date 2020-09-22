@@ -82,7 +82,7 @@ export default function CreateEvent(props) {
 	}
 
 	return (
-		<div className="eventpage">
+		<div>
 			<form
 				onSubmit={(e) => {
 					e.preventDefault()
