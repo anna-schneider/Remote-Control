@@ -6,9 +6,12 @@ body {
 	font-size: x-large;
 }
 
-.name-input,
-.submit-button {
+.name-input {
 	margin-bottom: 60px;
+}
+
+.submit-button {
+	margin-bottom: 180px;
 }
 
 .username {
@@ -28,6 +31,13 @@ body {
 		height: 32px;
 		width: 300px;
 	}
+
+	.submit-button {
+		height: 60px;
+		width: 200px;
+		font-size: 22px;
+		margin-bottom: 300px;
+	}
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -42,5 +52,12 @@ body {
 	.name-input {
 		height: 32px;
 		width: 300px;
+	}
+
+	.submit-button {
+		height: 60px;
+		width: 200px;
+		font-size: 22px;
+		margin-bottom: 400px;
 	}
 }
