@@ -82,10 +82,16 @@ src
       |__ fonts
       |__ images
 |__ components/
+      |__ Movie/
+            |__ Movie.js/
+            |__ Movie.css/
+      |__ MovieDetail/
+            |__ MovieDetail.js/
+            |__ MovieDetail.css/
       |__ shared/
-            |__ Layout/
-                  |__ Layout.jsx
-                  |__ Layout.css
+            |__ Dropdown/
+                  |__ Dropdown.jsx
+                  |__ Dropdown.css
             |__ Header/
                   |__ Header.jsx
                   |__ Header.css
@@ -95,12 +101,7 @@ src
             |__ Footer/
                   |__ Footer.jsx
                   |__ Footer.css
-            |__ Form/
-                  |__ Form.jsx
-                  |__ Form.css
-            |__ Movie-Form/
-                  |__ Movie-Form.jsx
-                  |__ Movie-Form.css
+
 |__ containers/
       |__ MainContainer.jsx
 |__ services/
@@ -129,9 +130,9 @@ src
 
 | Component  |    Type    | state | props | Description                                               |
 | :--------: | :--------: | :---: | :---: | :-------------------------------------------------------- |
-|   Layout   | functional |   n   |   n   | _The layout will contain the header and footer._          |
+|   Layout   | functional |   n   |   y   | _The layout will contain the header and footer._          |
 |   Header   | functional |   n   |   n   | _The header contains the logo._                           |
-|   Button   |   class    |   y   |   y   | _The button will be re-usable._                           |
+|   Button   |   class    |   n   |   y   | _The button will be re-usable._                           |
 |    Form    | functional |   y   |   n   | _The form will contain the event name and date._          |
 | Movie List | functional |   y   |   y   | _The list will contain a dropdown to rank movie options._ |
 |   Footer   | functional |   n   |   n   | _The footer will show creator info._                      |
@@ -140,20 +141,20 @@ src
 
 | Task                   | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------- | :------: | :------------: | :-----------: | :---------: |
-| Project Pitch          |    H     |     4 hrs      |     4 hrs     |     TBD     |
-| Components             |    H     |     5 hrs      |     0 hrs     |     TBD     |
-| Scroll Bar             |    L     |     1 hrs      |     0 hrs     |     TBD     |
-| Copy URL Button        |    L     |     1 hrs      |     0 hrs     |     TBD     |
-| Create CRUD Actions    |    H     |     11 hrs     |     2 hrs     |    2 hrs    |
-| CSS                    |    H     |     5 hrs      |     0 hrs     |     TBD     |
-| Media Queries          |    H     |     4 hrs      |     0 hrs     |     TBD     |
+| Project Pitch          |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
+| Components             |    H     |     5 hrs      |     5 hrs     |    5 hrs    |
+| Scroll Bar             |    L     |     1 hrs      |     0 hrs     |    0 hrs    |
+| Copy URL Button        |    L     |     1 hrs      |     1 hrs     |    1 hrs    |
+| Create CRUD Actions    |    H     |     11 hrs     |    11 hrs     |   11 hrs    |
+| CSS                    |    H     |     5 hrs      |     6 hrs     |    6 hrs    |
+| Media Queries          |    H     |     4 hrs      |     5 hrs     |    5 hrs    |
 | Back End Architecture  |    H     |     4 hrs      |     5 hrs     |    5 hrs    |
-| Front End Architecture |    H     |     4 hrs      |     0 hrs     |     TBD     |
-| Research & Debugging   |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
+| Front End Architecture |    H     |     4 hrs      |    5.5 hrs    |   5.5 hrs   |
+| Research & Debugging   |    H     |     4 hrs      |    5.5 hrs    |   5.5 hrs   |
 | PMVP CSS Animations    |    L     |     3 hrs      |     0 hrs     |     TBD     |
 | PMVP Calendar Invite   |    L     |     3 hrs      |     0 hrs     |     TBD     |
 | PMVP 3rd Party API     |    L     |     4 hrs      |     0 hrs     |     TBD     |
-| TOTAL                  |          |     48 hrs     |     4 hrs     |     TBD     |
+| TOTAL                  |          |     48 hrs     |    48 hrs     |   48 hrs    |
 
 <br>
 
@@ -178,8 +179,21 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+````<div>
+					<iframe
+						className="trailer"
+						title={name}
+						alt={name}
+						width="560"
+						height="315"
+						src={`https://www.youtube.com/embed/${trailer}`}
+						frameBorder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowFullScreen
+					></iframe>
+				</div>```
 
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution.
+````
