@@ -32,6 +32,12 @@
 	.date {
 		font-size: 35px;
 	}
+
+	.button.create-btn {
+		height: 50px;
+		width: 190px;
+		font-size: 22px;
+	}
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 	.date {
