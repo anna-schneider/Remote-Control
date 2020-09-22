@@ -26,11 +26,9 @@ body {
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 	.header-container {
-		background-image: url("../../../assets/images/vintage-tv-ad.jpg"),
-			url("../../../assets/images/vintage-tv-ad.jpg"),
-			url("../../../assets/images/vintage-tv-ad.jpg"),
-			url("../../../assets/images/vintage-tv-ad.jpg"),
-			url("../../../assets/images/vintage-tv-ad.jpg");
+		background-image: url("/images/vintage-tv-ad.jpg"),
+			url("/images/vintage-tv-ad.jpg"), url("/images/vintage-tv-ad.jpg"),
+			url("/images/vintage-tv-ad.jpg"), url("/images/vintage-tv-ad.jpg");
 		background-size: 40%, 50%, 70%, 90%, 100%;
 		background-position: 50% 50%;
 	}
