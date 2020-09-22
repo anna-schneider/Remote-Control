@@ -25,11 +25,7 @@ export default function Movie(props) {
 		<div className={isSelected ? "selected" : ""}>
 			<div className="option-container">
 				<div className="poster-container">
-					<img
-						className="poster"
-						src={require(`../../assets/images/${poster}`)}
-						alt={name}
-					/>
+					<img className="poster" src={`/images/${poster}`} alt={name} />
 					<div>{id}</div>
 					<div className="choice-container">
 						<div className="movie-title">{name}</div>

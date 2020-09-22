@@ -11,11 +11,7 @@ export default function MovieDetail(props) {
 			<div className="detail-container">
 				<div className="name">{name}</div>
 				<div>
-					<img
-						className="posters"
-						src={require(`../../assets/images/${poster}`)}
-						alt={name}
-					/>
+					<img className="posters" src={`/images/${poster}`} alt={name} />
 				</div>
 			</div>
 		</div>
