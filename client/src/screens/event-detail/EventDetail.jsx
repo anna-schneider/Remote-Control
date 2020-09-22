@@ -26,7 +26,7 @@ export default function EventDetail() {
 	}, [id, setEvent])
 
 	const getPath = () => {
-		copyToClipboard(`${window.location.origin}/eventvote`)
+		copyToClipboard(`${window.location.origin}/eventvote/${event.id}`)
 	}
 
 	const removeEvent = async () => {
@@ -36,7 +36,8 @@ export default function EventDetail() {
 	return (
 		<div className="event-detail-container">
 			<p className="greeting">
-				Hi attendees of {event.name}, you suck. {event.id}
+				Review selections for <br />
+				{event.name} on {event.date}.
 			</p>
 			<p>
 				{event.movies.map((movie) => {

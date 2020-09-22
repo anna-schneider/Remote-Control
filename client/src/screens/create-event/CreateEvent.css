@@ -1,11 +1,8 @@
-.eventpage {
-}
-
 .create-party {
 	font-family: "aqua";
 }
 
-.create-btn {
+.button {
 	margin-bottom: 12px;
 }
 
@@ -16,13 +13,14 @@
 
 .date {
 	margin: 6px 0 10px 8px;
+	font-size: 25px;
 }
 
 .name,
 .date {
 	font-family: "Haarlem-Deco";
-	font-size: 20px;
 	color: azure;
+	margin-left: 8px;
 }
 
 .welcome {
