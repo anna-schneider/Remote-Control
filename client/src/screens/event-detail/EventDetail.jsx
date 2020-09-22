@@ -33,11 +33,15 @@ export default function EventDetail() {
 		const singleEvent = await deleteEvent(id)
 	}
 
+	const transformDate = (str) => {
+		return new Date(str).toString().split(" GMT")[0]
+	}
+
 	return (
 		<div className="event-detail-container">
 			<p className="greeting">
 				Review selections for <br />
-				{event.name} on {event.date}.
+				{event.name} on <br /> {transformDate(event.date)}.
 			</p>
 			<p>
 				{event.movies.map((movie) => {
