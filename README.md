@@ -168,8 +168,6 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
-
 - ICS file to send a calendar invitation
 - CSS animations
 - Incorporate third party API to expand movie database
@@ -192,8 +190,4 @@ src
 						allowFullScreen
 					></iframe>
 				```
-
-## Code Issues & Resolutions
-
-> Use this section to list of all major issues encountered and their resolution.
 ````
