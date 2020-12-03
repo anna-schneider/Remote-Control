@@ -114,7 +114,7 @@ export default function CreateEvent(props) {
 				<Button
 					className="create-btn"
 					onClick={onClick}
-					content="Create Event"
+					content="CREATE EVENT"
 				/>
 
 				{movies.map((movie) => {

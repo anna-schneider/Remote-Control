@@ -5,7 +5,7 @@ import "./Button.css"
 export default function Button(props) {
 	return (
 		<div>
-			<button className={`button ${props.className}`} onClick={props.onClick}>
+			<button className={`button ${props.className} shrink shrink-on-hover`} onClick={props.onClick}>
 				{props.content}
 			</button>
 		</div>
