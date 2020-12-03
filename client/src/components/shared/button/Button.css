@@ -1,12 +1,13 @@
 .button {
 	height: 50px;
-	width: 105px;
-	background-color: #a0a0a0;
+	width: 125px;
+	background-color: rgb(222, 221, 219);
 	font-family: "Haarleem";
 	font-weight: 700;
 	font-size: 17px;
-	border-radius: 4px;
+	border-radius: 6px;
 	margin-bottom: 0;
+	box-shadow: 0px 15px 50px rgba(238, 231, 149);
 }
 
 .shrink:hover {
