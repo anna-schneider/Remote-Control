@@ -102,7 +102,7 @@ export default function CreateEvent(props) {
 					</label>
 					<label className="date">
 						Party Date:
-						<input
+						<input className="date-input"
 							type="date"
 							name="date"
 							value={date}
